@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { View, Text, FlatList } from 'react-native';
+import styles from '../styles/styles';
 import { listNotes } from '../services/noteService';
 
 const NoteList = () => {
