@@ -1,7 +1,9 @@
 import axios from 'axios';
 
 export const submitNote = async (noteText) => {
-  return await axios.post('http://192.168.86.27:3000/notes', {
+
+  // ATT: IP CHANGES SO THIS MAY HAVE TO CHANGE
+  return await axios.post('http://192.168.1.37:3000/notes', {
     note: { text: noteText }
   });
 };

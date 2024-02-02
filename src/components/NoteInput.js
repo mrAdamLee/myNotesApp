@@ -1,7 +1,13 @@
+import React, { useState } from 'react';
+import { View, TextInput, Button, StyleSheet } from 'react-native';
+import styles from '../styles/styles';
+import { submitNote } from '../services/noteService';
+
 const NoteInput = () => {
   const [noteText, setNoteText] = useState('');
 
   const handleSubmit = async () => {
+    console.log("Submit button pressed"); // For debugging
     try {
       const response = await submitNote(noteText);
       console.log(response.data);
